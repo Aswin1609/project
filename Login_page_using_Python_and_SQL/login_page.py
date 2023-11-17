@@ -15,10 +15,6 @@ class login_page:
         self.window.geometry("1280x800+0+0")
         self.window.config(bg="white")
 
-        # ============================================================================
-        # ==============================DESIGN PART===================================
-        # ============================================================================
-
         self.frame1 = Frame(self.window, bg="yellow")
         self.frame1.place(x=0, y=0, width=450, relheight=1)
 
@@ -44,7 +40,7 @@ class login_page:
             fg="brown4",
         ).place(x=100, y=360)
 
-        # =============Entry Field & Buttons============
+
 
         self.frame2 = Frame(self.window, bg="gray95")
         self.frame2.place(x=450, y=0, relwidth=1, relheight=1)
@@ -80,7 +76,6 @@ class login_page:
         )
         self.password_entry.place(x=50, y=160, width=300)
 
-        # ================Buttons===================
         self.login_button = Button(
             self.frame3,
             text="Log In",
@@ -175,11 +170,6 @@ class login_page:
                 else:
                     connection.close()
 
-                    # =========================SECOND WINDOW===============================
-                    # ------------Toplevel:create a window top of another window-----------
-                    # ------------focus_force:Helps to to focus on the current window------
-                    # -----Grab:Helps to grab the current window until user ungrab it------
-
                     self.root = Toplevel()
                     self.root.title("Forget Password?")
                     self.root.geometry("400x440+450+200")
@@ -254,7 +244,6 @@ class login_page:
                         bg="green2",
                         fg="white",
                     ).place(x=95, y=340, width=200)
-                    # =========================================================================
 
             except Exception as e:
                 messagebox.showerror("Error", f"{e}")
